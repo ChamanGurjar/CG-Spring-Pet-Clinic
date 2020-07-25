@@ -1,2 +1,2 @@
-# cg-spring-pet-clinic
+# CG-Spring-Pet-Clinic
 Standard spring-pet-clinic replica to learn and understand the Spring, Spring-boot, Jpa, Hibernate etc....
