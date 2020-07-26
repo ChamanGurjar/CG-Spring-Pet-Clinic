@@ -3,7 +3,7 @@
 
 	<groupId>com.gurjar.chaman</groupId>
 	<artifactId>cg-spring-pet-clinic</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 
 	<name>CG-Spring-Pet-Clinic</name>
 	<description>Spring-Pet-Clinic - my own version</description>
@@ -52,6 +52,6 @@
 
 	<scm>
 		<developerConnection>scm:git:git@github.com:ChamanGurjar/CG-Spring-Pet-Clinic.git</developerConnection>
-	  <tag>cg-spring-pet-clinic-0.0.2</tag>
+	  <tag>HEAD</tag>
   </scm>
 </project>
