@@ -6,4 +6,5 @@ package com.gurjar.chaman.cgspringpetclinic.model;
  */
 
 public class Owner extends Person {
+
 }

@@ -5,10 +5,11 @@ package com.gurjar.chaman.cgspringpetclinic.model;
  * @since  - 26-Jul-2020
  */
 
-public class Person {
+public class Person extends BaseEntity {
     private String firstName;
     private String lastName;
 
+    //    Getters And Setters
     public String getFirstName() {
         return firstName;
     }

@@ -6,10 +6,13 @@ import java.time.LocalDate;
  * @author - Chaman Gurjar
  * @since  - 26-Jul-2020
  */
-public class Pet {
+
+public class Pet extends BaseEntity {
     private PetType petType;
     private Owner owner;
     private LocalDate birthDate;
+
+    //    Getters And Setters
 
     public PetType getPetType() {
         return petType;
