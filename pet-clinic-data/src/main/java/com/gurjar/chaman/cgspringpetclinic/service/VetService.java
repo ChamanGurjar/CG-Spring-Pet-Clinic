@@ -9,9 +9,6 @@ import java.util.Set;
  * @version - 1.0.0 - 02-Aug-2020
  */
 
-public interface VetService {
+public interface VetService extends BaseService<Vet, Long> {
 
-    Vet findById(Long id);
-    Vet save(Vet vet);
-    Set<Vet> findAll();
 }
