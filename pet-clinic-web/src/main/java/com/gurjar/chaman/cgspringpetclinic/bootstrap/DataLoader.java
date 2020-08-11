@@ -31,7 +31,7 @@ public class DataLoader implements CommandLineRunner {
         owner.setLastName("Singh");
 
         Owner owner2 = new Owner();
-        owner2.setId(1L);
+        owner2.setId(2L);
         owner2.setFirstName("Abhijeet ");
         owner2.setLastName("Singh");
 
@@ -44,7 +44,7 @@ public class DataLoader implements CommandLineRunner {
         vet.setLastName("mix");
 
         Vet vet2 = new Vet();
-        vet2.setId(1L);
+        vet2.setId(2L);
         vet2.setFirstName("Sam");
         vet2.setLastName("macy");
 
