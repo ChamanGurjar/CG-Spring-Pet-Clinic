@@ -4,8 +4,6 @@ import com.gurjar.chaman.cgspringpetclinic.model.Owner;
 import com.gurjar.chaman.cgspringpetclinic.model.Vet;
 import com.gurjar.chaman.cgspringpetclinic.service.OwnerService;
 import com.gurjar.chaman.cgspringpetclinic.service.VetService;
-import com.gurjar.chaman.cgspringpetclinic.service.map.OwnerServiceMap;
-import com.gurjar.chaman.cgspringpetclinic.service.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -20,9 +18,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
@@ -53,5 +51,6 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet);
         vetService.save(vet2);
 
+        System.out.println("Bootstrap Data loaded on startup.");
     }
 }

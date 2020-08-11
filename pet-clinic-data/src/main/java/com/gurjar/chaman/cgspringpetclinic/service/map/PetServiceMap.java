@@ -2,6 +2,7 @@ package com.gurjar.chaman.cgspringpetclinic.service.map;
 
 import com.gurjar.chaman.cgspringpetclinic.model.Pet;
 import com.gurjar.chaman.cgspringpetclinic.service.BaseService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -10,6 +11,7 @@ import java.util.Set;
  * @version - 1.0.0 - 08-Aug-2020
  */
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long>  implements BaseService<Pet, Long> {
     @Override
     public Set<Pet> findAll() {
