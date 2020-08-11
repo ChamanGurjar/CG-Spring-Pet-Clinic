@@ -1,7 +1,7 @@
 package com.gurjar.chaman.cgspringpetclinic.service.map;
 
 import com.gurjar.chaman.cgspringpetclinic.model.Vet;
-import com.gurjar.chaman.cgspringpetclinic.service.BaseService;
+import com.gurjar.chaman.cgspringpetclinic.service.VetService;
 
 import java.util.Set;
 
@@ -10,7 +10,7 @@ import java.util.Set;
  * @version - 1.0.0 - 08-Aug-2020
  */
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements BaseService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
