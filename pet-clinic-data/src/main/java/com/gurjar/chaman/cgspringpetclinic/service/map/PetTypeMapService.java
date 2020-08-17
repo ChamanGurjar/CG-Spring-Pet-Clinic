@@ -2,6 +2,7 @@ package com.gurjar.chaman.cgspringpetclinic.service.map;
 
 import com.gurjar.chaman.cgspringpetclinic.model.PetType;
 import com.gurjar.chaman.cgspringpetclinic.service.PetTypeService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -9,7 +10,7 @@ import java.util.Set;
  * @author - Chaman Gurjar
  * @version - 1.0.0 - 17-Aug-2020
  */
-
+@Service
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
 
     @Override
