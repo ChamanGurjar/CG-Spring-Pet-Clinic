@@ -1,5 +1,7 @@
 package com.gurjar.chaman.cgspringpetclinic.model;
 
+import java.util.Set;
+
 /**
  * @author - Chaman Gurjar
  * @since  - 26-Jul-2020
@@ -7,4 +9,13 @@ package com.gurjar.chaman.cgspringpetclinic.model;
 
 public class Vet extends Person {
 
+ private Set<Speciality> specialities;
+
+    public Set<Speciality> getSpecialities() {
+        return specialities;
+    }
+
+    public void setSpecialities(Set<Speciality> specialities) {
+        this.specialities = specialities;
+    }
 }
