@@ -1,8 +1,10 @@
 package com.gurjar.chaman.cgspringpetclinic.bootstrap;
 
 import com.gurjar.chaman.cgspringpetclinic.model.Owner;
+import com.gurjar.chaman.cgspringpetclinic.model.PetType;
 import com.gurjar.chaman.cgspringpetclinic.model.Vet;
 import com.gurjar.chaman.cgspringpetclinic.service.OwnerService;
+import com.gurjar.chaman.cgspringpetclinic.service.PetTypeService;
 import com.gurjar.chaman.cgspringpetclinic.service.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -17,14 +19,25 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType savedDogPetType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        cat.setName("Cat");
+        PetType savedCatPetType = petTypeService.save(cat);
+
         Owner owner = new Owner();
         owner.setFirstName("Chaman");
         owner.setLastName("Singh");
