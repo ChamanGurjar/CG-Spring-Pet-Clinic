@@ -1,7 +1,7 @@
 package com.gurjar.chaman.cgspringpetclinic.service.map;
 
 import com.gurjar.chaman.cgspringpetclinic.model.Speciality;
-import com.gurjar.chaman.cgspringpetclinic.service.SpecialitiesService;
+import com.gurjar.chaman.cgspringpetclinic.service.SpecialityService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -12,7 +12,7 @@ import java.util.Set;
  */
 
 @Service
-public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialitiesService {
+public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
 
     @Override
     public Set<Speciality> findAll() {

@@ -7,6 +7,6 @@ import com.gurjar.chaman.cgspringpetclinic.model.Speciality;
  * @version - 1.0.0 - 18-Aug-2020
  */
 
-public interface SpecialitiesService  extends  BaseService<Speciality, Long> {
+public interface SpecialityService extends  BaseService<Speciality, Long> {
 
 }
