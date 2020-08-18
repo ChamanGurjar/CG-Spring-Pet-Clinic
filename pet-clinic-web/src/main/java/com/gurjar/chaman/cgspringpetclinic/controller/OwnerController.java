@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@RequestMapping(value = {"/owner/"})
+@RequestMapping(value = {"/owners/"})
 public class OwnerController {
 
     private final OwnerService ownerService;
@@ -25,5 +25,10 @@ public class OwnerController {
     public String listOfOwners(Model model) {
         model.addAttribute("owners", ownerService.findAll());
         return "owners/index";
+    }
+
+    @GetMapping("find")
+    private String find() {
+        return "PageNotFound";
     }
 }

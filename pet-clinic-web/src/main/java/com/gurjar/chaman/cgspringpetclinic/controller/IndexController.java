@@ -15,4 +15,9 @@ public class IndexController {
     public String index() {
         return "index";
     }
+
+    @GetMapping("/oups")
+    private String oups() {
+        return "PageNotFound";
+    }
 }

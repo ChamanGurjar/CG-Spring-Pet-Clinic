@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@RequestMapping(value = {"/vets", "/vets/"})
+@RequestMapping(value = {"/vets", "/vets/", "/vets.html"})
 public class VetController {
 
     private final VetService vetService;
