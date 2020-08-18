@@ -1,13 +1,17 @@
 package com.gurjar.chaman.cgspringpetclinic.bootstrap;
 
 import com.gurjar.chaman.cgspringpetclinic.model.Owner;
+import com.gurjar.chaman.cgspringpetclinic.model.Pet;
 import com.gurjar.chaman.cgspringpetclinic.model.PetType;
 import com.gurjar.chaman.cgspringpetclinic.model.Vet;
 import com.gurjar.chaman.cgspringpetclinic.service.OwnerService;
 import com.gurjar.chaman.cgspringpetclinic.service.PetTypeService;
 import com.gurjar.chaman.cgspringpetclinic.service.VetService;
+import org.apache.tomcat.jni.Local;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 /**
  * @author - Chaman Gurjar
@@ -41,10 +45,30 @@ public class DataLoader implements CommandLineRunner {
         Owner owner = new Owner();
         owner.setFirstName("Chaman");
         owner.setLastName("Singh");
+        owner.setAddress("2123 Meerut");
+        owner.setCity("Meerut");
+        owner.setTelephone("1231231231");
+
+        Pet jack = new Pet();
+        jack.setPetType(savedDogPetType);
+        jack.setOwner(owner);
+        jack.setBirthDate(LocalDate.now());
+        jack.setName("JACK");
+        owner.getPets().add(jack);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Abhijeet ");
         owner2.setLastName("Singh");
+        owner.setAddress("2123 Meerut");
+        owner.setCity("Meerut");
+        owner.setTelephone("4561231231");
+
+        Pet catty = new Pet();
+        catty.setPetType(savedCatPetType);
+        catty.setOwner(owner);
+        catty.setBirthDate(LocalDate.now());
+        catty.setName("CATTY");
+        owner2.getPets().add(catty);
 
         ownerService.save(owner);
         ownerService.save(owner2);
