@@ -1,10 +1,7 @@
 package com.gurjar.chaman.cgspringpetclinic.bootstrap;
 
 import com.gurjar.chaman.cgspringpetclinic.model.*;
-import com.gurjar.chaman.cgspringpetclinic.service.OwnerService;
-import com.gurjar.chaman.cgspringpetclinic.service.PetTypeService;
-import com.gurjar.chaman.cgspringpetclinic.service.SpecialityService;
-import com.gurjar.chaman.cgspringpetclinic.service.VetService;
+import com.gurjar.chaman.cgspringpetclinic.service.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -22,13 +19,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-                      SpecialityService specialityService) {
+                      SpecialityService specialityService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -89,6 +88,13 @@ public class DataLoader implements CommandLineRunner {
 
         ownerService.save(owner);
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(catty);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Fever");
+
+        visitService.save(catVisit);
 
         Vet vet = new Vet();
         vet.setFirstName("Bruno");
