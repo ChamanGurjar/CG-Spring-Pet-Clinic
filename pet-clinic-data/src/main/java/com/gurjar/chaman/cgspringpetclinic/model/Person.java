@@ -1,10 +1,13 @@
 package com.gurjar.chaman.cgspringpetclinic.model;
 
+import javax.persistence.MappedSuperclass;
+
 /**
  * @author - Chaman Gurjar
  * @since  - 26-Jul-2020
  */
 
+@MappedSuperclass
 public class Person extends BaseEntity {
     private String firstName;
     private String lastName;
