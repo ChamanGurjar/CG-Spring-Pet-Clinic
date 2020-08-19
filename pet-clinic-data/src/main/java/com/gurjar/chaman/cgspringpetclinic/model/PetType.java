@@ -1,5 +1,7 @@
 package com.gurjar.chaman.cgspringpetclinic.model;
 
+import lombok.*;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -8,18 +10,15 @@ import javax.persistence.Table;
  * @since  - 26-Jul-2020
  */
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "types")
 public class PetType extends BaseEntity {
 
     private String name;
 
-    //    Getters And Setters
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }

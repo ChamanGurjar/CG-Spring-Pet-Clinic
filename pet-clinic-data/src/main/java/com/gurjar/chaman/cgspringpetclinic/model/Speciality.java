@@ -1,5 +1,7 @@
 package com.gurjar.chaman.cgspringpetclinic.model;
 
+import lombok.*;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -8,17 +10,15 @@ import javax.persistence.Table;
  * @version - 1.0.0 - 17-Aug-2020
  */
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "specialities")
 public class Speciality extends BaseEntity {
 
     private String description;
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

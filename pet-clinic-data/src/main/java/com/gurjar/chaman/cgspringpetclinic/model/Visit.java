@@ -1,5 +1,7 @@
 package com.gurjar.chaman.cgspringpetclinic.model;
 
+import lombok.*;
+
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -11,6 +13,11 @@ import java.time.LocalDate;
  * @version - 1.0.0 - 17-Aug-2020
  */
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "visits")
 public class Visit extends BaseEntity {
@@ -22,28 +29,4 @@ public class Visit extends BaseEntity {
     @JoinColumn(name = "pet_id")
     private Pet pet;
 
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate localDate) {
-        this.date = localDate;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Pet getPet() {
-        return pet;
-    }
-
-    public void setPet(Pet pet) {
-        this.pet = pet;
-    }
 }
