@@ -3,6 +3,7 @@ package com.gurjar.chaman.cgspringpetclinic.service.map;
 import com.gurjar.chaman.cgspringpetclinic.model.Pet;
 import com.gurjar.chaman.cgspringpetclinic.service.BaseService;
 import com.gurjar.chaman.cgspringpetclinic.service.PetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -13,6 +14,7 @@ import java.util.Set;
  */
 
 @Service
+@Profile({"default", "map"})
 public class PetServiceMap extends AbstractMapService<Pet, Long>  implements PetService {
 
     @Override
